@@ -1,6 +1,9 @@
 <?php
 
+require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/config/config.php';
+
+
 
 $simba = new Animal;
 $simba->setId(1);
@@ -22,3 +25,4 @@ $firstAnimal->setAnimalId(1);
 $firstAnimal->setZooId(1);
 
 var_dump($firstAnimal);
+
