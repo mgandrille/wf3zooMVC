@@ -5,6 +5,9 @@
 // require __DIR__ . '/../src/models/AnimalZoo.php';
 
 spl_autoload_register(function ($class) {
-    include __DIR__ . '/../src/models/' . $class . '.php';
+    require __DIR__ . '/../src/models/' . $class . '.php';
+});
+
+spl_autoload_register(function ($class) {
     include __DIR__ . '/../src/controllers/' . $class . '.php';
 });
