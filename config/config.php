@@ -4,10 +4,17 @@
 // require __DIR__ . '/../src/models/Zoo.php';
 // require __DIR__ . '/../src/models/AnimalZoo.php';
 
-spl_autoload_register(function ($class) {
-    require __DIR__ . '/../src/models/' . $class . '.php';
-});
+const CLASSES_FOLDERS = [
+    'models',
+    'controllers'
+];
 
 spl_autoload_register(function ($class) {
-    include __DIR__ . '/../src/controllers/' . $class . '.php';
+
+    foreach(CLASSES_FOLDERS as $folder) {
+        $file = __DIR__ . '/../src/'. $folder . '/' . $class . '.php';
+        if( file_exists($file) ) {
+            require $file;
+        } 
+    }
 });
