@@ -61,7 +61,7 @@ class Animal {
      * @return self
      */
     public function setCountry($country) {
-        $this->cou$country = $country;
+        $this->country = $country;
         return $this;
     }
 
