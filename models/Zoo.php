@@ -20,7 +20,8 @@ class Zoo {
     /**
      * @return int
      */
-    public function getId() {
+    public function getId() : int
+    {
         return $this->id;
     }
 
@@ -28,7 +29,8 @@ class Zoo {
      * @param int $id
      * @return self
      */
-    public function setId($id) {
+    public function setId(int $id) : self
+    {
         $this->id = $id;
         return $this;
     }
@@ -36,7 +38,8 @@ class Zoo {
     /**
      * @return string
      */
-    public function getName() {
+    public function getName() : string
+    {
         return $this->name;
     }
 
@@ -44,7 +47,8 @@ class Zoo {
      * @param int $name
      * @return self
      */
-    public function setName($name) {
+    public function setName($name) : self
+    {
         $this->name = $name;
         return $this;
     }
@@ -52,7 +56,8 @@ class Zoo {
     /**
      * @return string
      */
-    public function getCity() {
+    public function getCity() : string
+    {
         return $this->city;
     }
 
@@ -60,7 +65,8 @@ class Zoo {
      * @param int $city
      * @return self
      */
-    public function setCity($city) {
+    public function setCity($city) : self
+    {
         $this->city = $city;
         return $this;
     }

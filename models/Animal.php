@@ -20,7 +20,8 @@ class Animal {
     /**
      * @return int
      */
-    public function getId() {
+    public function getId() : int
+    {
         return $this->id;
     }
 
@@ -28,7 +29,8 @@ class Animal {
      * @param int $id
      * @return self
      */
-    public function setId($id) {
+    public function setId(int $id) : self
+    {
         $this->id = $id;
         return $this;
     }
@@ -36,7 +38,8 @@ class Animal {
     /**
      * @return string
      */
-    public function getSpecies() {
+    public function getSpecies() : string
+    {
         return $this->species;
     }
 
@@ -44,7 +47,8 @@ class Animal {
      * @param int $species
      * @return self
      */
-    public function setSpecies($species) {
+    public function setSpecies($species) : self
+    {
         $this->species = $species;
         return $this;
     }
@@ -52,7 +56,8 @@ class Animal {
     /**
      * @return string
      */
-    public function getCountry() {
+    public function getCountry() : string
+    {
         return $this->country;
     }
 
@@ -60,12 +65,11 @@ class Animal {
      * @param int $country
      * @return self
      */
-    public function setCountry($country) {
+    public function setCountry($country) : self
+    {
         $this->country = $country;
         return $this;
     }
 
 }
 
-$simba = new Animal;
-$simba->getSpecies();

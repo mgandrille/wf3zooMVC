@@ -20,7 +20,8 @@ class AnimalZoo {
     /**
      * @return int
      */
-    public function getId() {
+    public function getId() :int
+    {
         return $this->id;
     }
 
@@ -28,7 +29,8 @@ class AnimalZoo {
      * @param int $id
      * @return self
      */
-    public function setId($id) {
+    public function setId(int $id) : self   
+    {
         $this->id = $id;
         return $this;
     }
@@ -36,7 +38,8 @@ class AnimalZoo {
     /**
      * @return string
      */
-    public function getAnimalId() {
+    public function getAnimalId() : int
+    {
         return $this->animalId;
     }
 
@@ -44,7 +47,8 @@ class AnimalZoo {
      * @param int $animalId
      * @return self
      */
-    public function setAnimalId($animalId) {
+    public function setAnimalId(int $animalId) : self   
+    {
         $this->animalId = $animalId;
         return $this;
     }
@@ -52,7 +56,8 @@ class AnimalZoo {
     /**
      * @return string
      */
-    public function getZooId() {
+    public function getZooId() : int
+    {
         return $this->zooId;
     }
 
@@ -60,7 +65,8 @@ class AnimalZoo {
      * @param int $zooId
      * @return self
      */
-    public function setZooId($zooId) {
+    public function setZooId(int $zooId) : self 
+    {
         $this->zooId = $zooId;
         return $this;
     }
