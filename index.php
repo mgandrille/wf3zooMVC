@@ -25,17 +25,17 @@ $router->get('/conditions', function() {
     echo 'Voici les conditions d\'utilisation.';
 });
 
-$router->get('/articles/d{id}', function($id) {
-    echo 'Voici l\'article numéro ' . $id;
-});
+// $router->get('/articles/d{id}', function($id) {
+//     echo 'Voici l\'article numéro ' . $id;
+// });
 
 $router->get('/product/([a-z0-9_-]+)', function($product) {
     echo 'Voici le produit demandé : ' . htmlentities($product) ;
 });
 
 $router->get('/articles', 'ArticlesController@index');
+$router->get('/articles/(\d+)', 'ArticlesController@show');
 
-$router->get('/animals', 'AnimalController@index');
 
 $router->run();
 

@@ -8,4 +8,8 @@ class ArticlesController {
         echo 'Voici la liste des articles';
     }
 
+    public static function show($id) {
+        echo 'Voici l\'article numéro ' . $id;
+    }
+
 }
