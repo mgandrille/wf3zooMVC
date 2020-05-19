@@ -1,43 +1,7 @@
 <?php
 
-use App\Controller\AnimalController;
-use App\Controller\ArticlesController;
-use App\Model\Animal;
-use Bramus\Router\Router;
+require 'config/routes.php';
 
-require __DIR__ . '/vendor/autoload.php';
-// require __DIR__ . '/config/config.php';
-
-$router = new Router;
-$router->setNamespace('App\Controller');
-
-// $animal = new Animal;
-
-$router->get('/about', function() {
-    echo "bienvenue sur la page About!";
-});
-
-$router->get('/contact', function () {
-    echo "Page contactez-nous.";
-});
-
-$router->get('/conditions', function() {
-    echo 'Voici les conditions d\'utilisation.';
-});
-
-// $router->get('/articles/d{id}', function($id) {
-//     echo 'Voici l\'article numéro ' . $id;
-// });
-
-$router->get('/product/([a-z0-9_-]+)', function($product) {
-    echo 'Voici le produit demandé : ' . htmlentities($product) ;
-});
-
-$router->get('/articles', 'ArticlesController@index');
-$router->get('/articles/(\d+)', 'ArticlesController@show');
-
-
-$router->run();
 
 // $simba = new Animal;
 // $simba->setId(1);
@@ -59,4 +23,3 @@ $router->run();
 // $firstAnimal->setZooId(1);
 
 // var_dump($firstAnimal);
-
