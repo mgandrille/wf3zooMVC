@@ -1,6 +1,7 @@
 <?php
+namespace App\Model;
 
-class Animal {
+class AnimalZoo {
 
     /**
      * @var int
@@ -10,12 +11,12 @@ class Animal {
     /**
      * @var string
      */
-    private $species;
+    private $animalId;
 
     /**
      * @var string
      */
-    private $country;
+    private $zooId;
 
     /**
      * Nom de la table en BDD
@@ -23,21 +24,21 @@ class Animal {
      * 
      * @var string
      */
-    public $tableName = "Animal";
+    public $tableName = "AnimalZoo";
 
     /**
      * @return int
      */
-    public function getId() : int
+    public function getId() :int
     {
         return $this->id;
     }
 
-    /**
+        /**
      * @param int $id
      * @return self
      */
-    public function setId(int $id) : self
+    public function setId(int $id) : self   
     {
         $this->id = $id;
         return $this;
@@ -46,38 +47,37 @@ class Animal {
     /**
      * @return string
      */
-    public function getSpecies() : string
+    public function getAnimalId() : int
     {
-        return $this->species;
+        return $this->animalId;
     }
 
-        /**
-     * @param int $species
+    /**
+     * @param int $animalId
      * @return self
      */
-    public function setSpecies($species) : self
+    public function setAnimalId(int $animalId) : self   
     {
-        $this->species = $species;
+        $this->animalId = $animalId;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getCountry() : string
+    public function getZooId() : int
     {
-        return $this->country;
+        return $this->zooId;
     }
 
     /**
-     * @param int $country
+     * @param int $zooId
      * @return self
      */
-    public function setCountry($country) : self
+    public function setZooId(int $zooId) : self 
     {
-        $this->country = $country;
+        $this->zooId = $zooId;
         return $this;
     }
 
 }
-

@@ -9,12 +9,12 @@ const CLASSES_FOLDERS = [
     'controllers'
 ];
 
-spl_autoload_register(function ($class) {
+// spl_autoload_register(function ($class) {
 
-    foreach(CLASSES_FOLDERS as $folder) {
-        $file = __DIR__ . '/../src/'. $folder . '/' . $class . '.php';
-        if( file_exists($file) ) {
-            require $file;
-        } 
-    }
-});
+//     foreach(CLASSES_FOLDERS as $folder) {
+//         $file = __DIR__ . '/../src/'. $folder . '/' . $class . '.php';
+//         if( file_exists($file) ) {
+//             require $file;
+//         } 
+//     }
+// });
