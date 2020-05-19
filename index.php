@@ -1,5 +1,7 @@
 <?php
 
+use App\Controller\AnimalController;
+use App\Controller\ArticlesController;
 use App\Model\Animal;
 use Bramus\Router\Router;
 
@@ -7,8 +9,9 @@ require __DIR__ . '/vendor/autoload.php';
 // require __DIR__ . '/config/config.php';
 
 $router = new Router;
+$router->setNamespace('App\Controller');
 
-$animal = new Animal;
+// $animal = new Animal;
 
 $router->get('/about', function() {
     echo "bienvenue sur la page About!";
@@ -29,6 +32,10 @@ $router->get('/articles/d{id}', function($id) {
 $router->get('/product/([a-z0-9_-]+)', function($product) {
     echo 'Voici le produit demandé : ' . htmlentities($product) ;
 });
+
+$router->get('/articles', 'ArticlesController@index');
+
+$router->get('/animals', 'AnimalController@index');
 
 $router->run();
 
