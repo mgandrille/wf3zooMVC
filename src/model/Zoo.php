@@ -122,6 +122,17 @@ class Zoo extends AbstractModel {
         return $zoo;
     }
 
+    public static function createZoo() {
+        $bdd = self::getPdo();
+
+        $query =   "INSERT INTO zoo (name, city)
+                    VALUES (:name, :city)";
+        $response = $bdd->prepare($query);
+        $response->execute([
+            'name' => $_POST['name'],
+            'city' => $_POST['city']
+        ]);
+    }
 
     
 

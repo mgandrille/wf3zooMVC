@@ -27,8 +27,8 @@ class ZooController extends AbstractController {
     }
 
     public static function new() {
-        echo 'Création d\'un nouveau zoo';
-        var_dump($_POST);
+        Zoo::createZoo();
+        self::index();
     }
 
     public static function edit(int $id) {

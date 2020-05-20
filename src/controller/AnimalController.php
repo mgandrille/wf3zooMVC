@@ -31,8 +31,8 @@ class AnimalController extends AbstractController {
     }
 
     public static function new() {
-        echo 'Animal créé';
-        var_dump($_POST);
+        Animal::createAnimal();
+        echo self::index();
     }
 
     public static function edit(int $id) {
