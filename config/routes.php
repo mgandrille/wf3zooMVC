@@ -7,28 +7,7 @@ require __DIR__ . '/../vendor/autoload.php';
 $router = new Router;
 $router->setNamespace('App\Controller');
 
-// $router->get('/about', function() {
-//     echo "bienvenue sur la page About!";
-// });
-
-// $router->get('/contact', function () {
-//     echo "Page contactez-nous.";
-// });
-
-// $router->get('/conditions', function() {
-//     echo 'Voici les conditions d\'utilisation.';
-// });
-
-// // $router->get('/articles/d{id}', function($id) {
-// //     echo 'Voici l\'article numéro ' . $id;
-// // });
-
-// $router->get('/product/([a-z0-9_-]+)', function($product) {
-//     echo 'Voici le produit demandé : ' . htmlentities($product) ;
-// });
-
-// $router->get('/articles', 'ArticlesController@index');
-// $router->get('/articles/(\d+)', 'ArticlesController@show');
+$router->get('/', 'AppController@index');
 
 $router->get('/animal', 'AnimalController@index');
 $router->get('/animal/(\d+)', 'AnimalController@show');
