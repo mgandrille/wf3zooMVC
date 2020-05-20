@@ -16,15 +16,16 @@
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
-            <a class="navbar-brand" href="#">WF3 Zoo (MVC)</a>
+            <a class="navbar-brand" href="{{ base_path }}">WF3 Zoo (MVC)</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Lien <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">un autre lien</a>
-                    <a class="nav-item nav-link" href="#">un troisième lien</a>
+                    <a class="nav-item nav-link active" href="{{ base_path ~ 'animal'}}">Animaux</a>
+                    <a class="nav-item nav-link" href="{{ base_path ~ 'animal/create'}}">Créer un animal</a>
+                    <a class="nav-item nav-link" href="{{ base_path ~ 'zoo'}}">Zoos</a>
+                    <a class="nav-item nav-link" href="{{ base_path ~ 'zoo/create'}}">Créer un zoo</a>
                 </div>
             </div>
         </nav>
