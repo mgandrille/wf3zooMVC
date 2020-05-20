@@ -4,19 +4,25 @@ namespace App\Controller;
 class ZooController extends AbstractController {
 
     public static function index() {
-        echo 'Voici la liste de tous les zoo !';
+        // echo 'Voici la liste de tous les zoo !';
+        echo self::getTwig()->render('zoo/index.html');
     }
 
     public static function show(int $id) {
-        echo 'Voici le zoo : ' . $id;
+        // echo 'Voici le zoo : ' . $id;
+        echo self::getTwig()->render('zoo/show.html', [
+            'zooId' => $id,
+        ]);
     }
 
     public static function create() {
-        echo 'Formulaire de création d\'un zoo' ;
+        // echo 'Formulaire de création' ;
+        echo self::getTwig()->render('zoo/create.html');
     }
 
     public static function new() {
         echo 'Création d\'un nouveau zoo';
+        var_dump($_POST);
     }
 
     public static function edit(int $id) {

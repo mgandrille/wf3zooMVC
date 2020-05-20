@@ -26,17 +26,7 @@ class AnimalController extends AbstractController {
 
     public static function new() {
         echo 'Animal créé';
-        echo self::getTwig()->render('animal/create.html', [
-            'espece'            => $_POST['espece'],
-            'nom'               => $_POST['nom'],
-            'poids'             => $_POST['poids'],
-            'taille'            => $_POST['taille'],
-            'date_de_naissance' => $_POST['date_de_naissance'],
-            'pays_origine'      => $_POST['pays_origine'],
-            'sexe'              => $_POST['sexe'],
-            'description_courte'=> $_POST['description_courte']
-        ]);
-
+        var_dump($_POST);
     }
 
     public static function edit(int $id) {
