@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Controller;
 
-class AnimalZooController {
+class AnimalZooController extends AbstractController {
 
     public static function index() {
         echo 'Voici la liste de toutes les correspondnaces Animal / Zoo !';

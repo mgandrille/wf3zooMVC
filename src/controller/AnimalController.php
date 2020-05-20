@@ -1,38 +1,27 @@
 <?php
 namespace App\Controller;
 
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-
 require __DIR__ . '/../../vendor/autoload.php';
 
 
-class AnimalController {
-
-    public $twig;
-
-    public function __construct() {
-        $loader = new FilesystemLoader(__DIR__ . '/../../views');
-        $twig = new Environment($loader); 
-        
-        $this->twig = $twig;
-    }
+class AnimalController extends AbstractController {
 
     public static function index() {
         // echo 'Voici la liste de tous les animaux !';
-        echo $this->twig->render('animal/index.html');
+        echo self::getTwig()->render('animal/index.html');
     }
 
     public static function show(int $id) {
         // echo 'Voici l\'animal : ' . $id;
-        echo $this->twig->render('animal/show.html', [
+        echo self::getTwig()->render('animal/show.html', [
             'animalId' => $id,
         ]);
 
     }
 
     public static function create() {
-        echo 'Formulaire de création' ;
+        // echo 'Formulaire de création' ;
+        echo self::getTwig()->render('animal/create.html');
     }
 
     public static function new() {
