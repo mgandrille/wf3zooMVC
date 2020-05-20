@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use App\Model\Animal;
+
 require __DIR__ . '/../../vendor/autoload.php';
 
 
@@ -8,7 +10,11 @@ class AnimalController extends AbstractController {
 
     public static function index() {
         // echo 'Voici la liste de tous les animaux !';
-        echo self::getTwig()->render('animal/index.html');
+        $animaux = Animal::findAll();
+        // var_dump($animaux);
+        echo self::getTwig()->render('animal/index.html', [
+            'animaux' => $animaux,
+        ]);
     }
 
     public static function show(int $id) {

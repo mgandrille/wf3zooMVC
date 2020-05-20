@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-class Animal {
+class Animal extends AbstractModel {
 
     /**
      * @var int
@@ -79,6 +79,49 @@ class Animal {
         $this->country = $country;
         return $this;
     }
+
+        /**
+     * Retourne la liste des animaux en BDD
+     * 
+     * @return array $dataAsObjects
+     */
+    public static function findAll() {
+        
+        $bdd = self::getPdo();
+
+        $query = "SELECT * FROM Animal";
+        $response = $bdd->prepare($query);
+        $response->execute();
+
+        $data = $response->fetchAll();
+
+        // On prépare le tableau qui contiendra nos animaux en format Object
+        $dataAsObjects = [];
+
+        // On fait un foreach de $data (données de la bdd) pour transformer chaque data en un object
+        // puis on met l'object dans le tableau $dataAsObjects
+        foreach($data as $d) {
+            $dataAsObjects[] = self::toObject($d);
+        }
+
+        return $dataAsObjects;
+    }
+
+    /**
+     * Transforme un array de données de la table Animal en un objet Animal
+     * 
+     * @return object $animal
+     */
+    public static function toObject($array) {
+
+        $animal = new Animal;
+        $animal->setId($array['id']);
+        $animal->setSpecies($array['species']);
+        $animal->setCountry($array['country']);
+
+        return $animal;
+    }
+
 
 }
 

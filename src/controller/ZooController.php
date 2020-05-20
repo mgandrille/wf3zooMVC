@@ -1,11 +1,17 @@
 <?php
 namespace App\Controller;
 
+use App\Model\Zoo;
+
 class ZooController extends AbstractController {
 
     public static function index() {
         // echo 'Voici la liste de tous les zoo !';
-        echo self::getTwig()->render('zoo/index.html');
+        $zoos = Zoo::findAll();
+        // var_dump($zoos);
+        echo self::getTwig()->render('zoo/index.html', [
+            'zoos' => $zoos,
+        ]);
     }
 
     public static function show(int $id) {

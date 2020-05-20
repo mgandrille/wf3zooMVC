@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-class AnimalZoo {
+class AnimalZoo extends AbstractModel {
 
     /**
      * @var int

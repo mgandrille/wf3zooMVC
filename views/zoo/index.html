@@ -6,23 +6,16 @@
     <div class="container">
         <div class="row">
 
-            <div class="card">
-                <h5 class="card-header">Zoo #1</h5>
+            {% for zoo in zoos %}
+            <div class="card mx-2">
+                <h5 class="card-header">Zoo # {{ zoo.id }}</h5>
                 <div class="card-body">
-                    <h5 class="card-title">Un zoo</h5>
-                    <p class="card-text">Avec des animaux tout beaux.</p>
-                    <a href="{{ base_path ~ 'zoo/1'}}" class="btn btn-primary">Voir</a>
+                    <h5 class="card-title"> {{ zoo.name }} </h5>
+                    <p>Se situe à : {{ zoo.city }} </p>
+                    <a href="{{ base_path ~ 'zoo/'}}{{ zoo.id}}" class="btn btn-primary">Voir</a>
                 </div>
             </div>
-
-            <div class="card">
-                <h5 class="card-header">Zoo #2</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Un zoo</h5>
-                    <p class="card-text">Avec des animaux tout beaux.</p>
-                    <a href="{{ base_path ~ 'zoo/2'}}" class="btn btn-primary">Voir</a>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>    
     </div>

@@ -2,6 +2,10 @@
 
 const BASE_PATH = "http://localhost/wf3zooMVC/" ;
 
+const DB_DSN = 'mysql:dbname=wf3zoomvc;host=localhost;port=3306;charset=utf8';
+const DB_USERNAME = 'root';
+const DB_PASSWORD = 'root';
+
 // require __DIR__ . '/../src/models/Animal.php';
 // require __DIR__ . '/../src/models/Zoo.php';
 // require __DIR__ . '/../src/models/AnimalZoo.php';
