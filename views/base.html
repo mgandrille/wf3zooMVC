@@ -15,7 +15,7 @@
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <nav id="top" class="navbar navbar-expand-lg navbar-light bg-success">
             <a class="navbar-brand" href="{{ base_path }}">WF3 Zoo (MVC)</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,14 +30,26 @@
             </div>
         </nav>
 
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col">
-                    {% block content %} {% endblock %}
+        <header class="mb-4">
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col">
+                        {% block content %} {% endblock %}
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div>    
+        </header>
 
+        <footer class="text-muted pt-5 border-top">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#top">Back to top</a>
+                </p>
+                <p>Gestin de WF3 Zoo (MVC) - &copy; WF3 équipe Dev 2020</p>
+                <p>Nouveau au Zoo ? <a href="https://wf3.fr/">Visitez WF3</a>... </p>
+            </div>
+        </footer>
+    
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

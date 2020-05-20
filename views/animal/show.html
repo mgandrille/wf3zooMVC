@@ -3,4 +3,39 @@
 {% block content %}
     <h1>Bienvenue sur la page de l'animal # {{ animalId }} </h1>
 
+    <div class="card">
+        <img src="#" class="card-img-top" height="50" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">Nom de l'animal</h3>
+            <p class="card-text">Description de l'animal</p>
+        </div> 
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><Strong>Espèce</Strong> 
+                <p>Belle espèce (sexe : masculin ou féminin ?)</p>
+            </li>
+            <li class="list-group-item"><strong>Morphologie</strong>
+                <ul>
+                    <li>Poids : quelques Kg </li>
+                    <li>Taille : quelques cm </li>
+                </ul>
+            </li>
+            <li class="list-group-item"><strong>Origine</strong>
+                <ul>
+                    <li>Date de naissance : happy Birthday !</li>
+                    <li>Pays de naissance : Un beau pays</li>
+                </ul>
+            </li>
+            <li class="list-group-item"><strong>Zoos</strong>
+                <p>On retrouve cet animal dans le(s) zoo(s) suivant(s) :</p>
+                <ul>
+                    <li><a href="{{ base_path ~ 'zoo/{{ zooId }}' }}">Zoo # {{ zooId}} </a></li>
+                    <li><a href="{{ base_path ~ 'zoo/{{ zooId }}' }}">Zoo # {{ zooId}} </a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="card-footer text-center">
+            <a href="{{ base_path }}" class="card-link">Accueil</a>
+        </div>
+    </div>
+
 {% endblock content %}
